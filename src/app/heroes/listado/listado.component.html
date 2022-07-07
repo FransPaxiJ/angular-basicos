@@ -1,0 +1,21 @@
+<p>List of Heroes</p>
+
+<div *ngIf="heroDelete; else noDelete"> <!-- *ngIf="heroDelete != ''" este codigo hace lo mismo --> 
+    <h3>Heroe Delete: <small>{{heroDelete}}</small></h3>
+</div>
+
+<ng-template #noDelete> <!--this help to the else, show the ng-template-->
+    <h3>you haven't deleted anything</h3>
+</ng-template>
+
+
+<button (click)="deleteHero()">Delete</button>
+
+<ul>
+    <li *ngFor="let hero of heroes; let i = index"> 
+        {{i+1}} - {{hero}}
+    </li>
+</ul>
+
+
+
