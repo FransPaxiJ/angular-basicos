@@ -1,0 +1,10 @@
+<h3>Agregate</h3>
+    <hr>
+        <form (ngSubmit)="agregate()"> <!-- ngSubmit is a directive that is used to trigger the form submission. -->
+            <input type="text" placeholder="Name" name="name" [(ngModel)]="new.name" > <!-- [value]="new.name" is used to bind the value of the input to the new.name property. --> <!-- [value]="new.name" (input)="changeName()" this is one way to solve it -->
+            <input type="number" placeholder="Power" name="power" [(ngModel)]="new.power"> <!-- the ngModel replace the value and ((input)="changeName()")-->
+            <!-- [value]="new.name" (input)="changeName()" -->
+            <button type="submit"> 
+                Agregate
+            </button>
+        </form>

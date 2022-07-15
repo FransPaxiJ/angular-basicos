@@ -1,0 +1,31 @@
+<h1>Dragon Ball Z</h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <app-personajes></app-personajes> <!-- [characters]="characters" is the same as characters(personajes.ts)= characters(main-page.ts) -->
+        <!-- <h3>Character</h3>
+        <hr>
+        <ul >
+            <li *ngFor="let character of characters" >
+                {{character.name}} - {{character.power | number}} the number is a pipe, put the "," for that show "15,000"
+            </li>
+        </ul> -->
+    </div>
+
+    <div class="col">
+        <app-agregar [new]="new"></app-agregar> <!-- the [new(agregar.ts)]="new(main-page.ts)" (newCharacter(agregar.ts))="agregateNewCharacter($event)" the $event is the new of agregar.component.ts-->
+
+        <!-----------------------------------------------  -->
+        <!-- <h3>Agregate</h3>
+    <hr>
+        <form (ngSubmit)="agregate()">  ngSubmit is a directive that is used to trigger the form submission.
+            <input type="number" placeholder="Power" name="power" [(ngModel)]="new.power"> the ngModel replace the value and ((input)="changeName()")
+            [value]="new.name" (input)="changeName()" 
+            <button type="submit"> 
+                Agregate
+            </button>
+        </form> -->
+    </div>
+
+</div>
